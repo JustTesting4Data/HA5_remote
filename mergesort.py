@@ -39,10 +39,22 @@ def merge_sort(list_to_sort):
 import matplotlib.pyplot as plt
 
 my_list = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-x = range(len(my_list))
-plt.plot(x, my_list)
+x = range(len(my_list)) 
+
+plt.scatter(x, my_list)
+plt.bar(x, my_list, width=0.16, align='center', alpha=0.5)
+plt.xlabel('Indices')
+plt.ylabel('List values')
+plt.title('Unsorted List Values vs. Indices')
+plt.grid(lw=.7)
 plt.show()
+
 merge_sort(my_list)
-x = range(len(my_list))
-plt.plot(x, my_list)
+
+plt.scatter(x, my_list)
+plt.bar(x, my_list, width=0.16, align='center', alpha=0.5)
+plt.xlabel('Indices')
+plt.ylabel('List values')
+plt.title('Sorted List Values vs. Indices')
+plt.grid(lw=.7)
 plt.show()
